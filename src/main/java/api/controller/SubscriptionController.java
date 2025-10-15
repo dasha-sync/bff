@@ -1,0 +1,45 @@
+package api.controller;
+
+//import api.dto.common.ApiResponse;
+//import api.dto.subscription.SubscriptionResponse;
+//import api.service.business.SubscriptionService;
+//import java.security.Principal;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+
+@RestController
+@RequestMapping("/subscription")
+@RequiredArgsConstructor
+public class SubscriptionController {
+//  private final SubscriptionService subscriptionService;
+//
+//  @PostMapping("/create/{cardId}")
+//  public ResponseEntity<ApiResponse<SubscriptionResponse>> createSubscription(
+//      @PathVariable Long cardId,
+//      Principal principal) throws Exception {
+//    SubscriptionResponse subscription = subscriptionService.createSubscription(cardId, principal.getName());
+//    return ResponseEntity.ok(new ApiResponse<>("Subscription created successfully", subscription));
+//  }
+//
+//  @DeleteMapping("/cancel")
+//  public ResponseEntity<ApiResponse<SubscriptionResponse>> cancelSubscription(Principal principal) throws Exception {
+//    SubscriptionResponse subscription = subscriptionService.cancelSubscription(principal.getName());
+//    return ResponseEntity.ok(new ApiResponse<>("Subscription cancelled successfully", subscription));
+//  }
+//
+//  @PutMapping("/change-payment-method/{cardId}")
+//  public ResponseEntity<ApiResponse<SubscriptionResponse>> updatePaymentMethod(
+//      @PathVariable Long cardId,
+//      Principal principal) throws Exception {
+//    SubscriptionResponse subscription = subscriptionService.updatePaymentMethod(cardId, principal.getName());
+//    return ResponseEntity.ok(new ApiResponse<>("Payment method updated successfully", subscription));
+//  }
+//
+//  @GetMapping
+//  public ResponseEntity<ApiResponse<SubscriptionResponse>> getSubscription(Principal principal) {
+//    SubscriptionResponse subscription = subscriptionService.getSubscription(principal.getName());
+//    return ResponseEntity.ok(new ApiResponse<>("User subscription", subscription));
+//  }
+}
