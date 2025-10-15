@@ -1,8 +1,6 @@
 services:
   bff:
-    build:
-      context: .
-    # image: dashasync/bff:latest   # build: context: ./../usage-worker
+    image: dashasync/bff-bff:latest   # build: context: ./../usage-worker
     ports:
       - "8080:8080"
     depends_on:
@@ -17,10 +15,24 @@ services:
       - spay-net
 
   metrics:
-    # build: context: ./../metrics
     image: dashasync/bff-metrics:latest
     ports:
       - "8081:8081"
+    depends_on:
+      kafka:
+        condition: service_healthy
+      db:
+        condition: service_started
+    env_file: .env
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - spay-net
+
+  registry:
+    image: dashasync/bff-registry:latest
+    ports:
+      - "8083:8083"
     depends_on:
       kafka:
         condition: service_healthy
