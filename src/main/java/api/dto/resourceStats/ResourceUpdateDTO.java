@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class ResourceUpdateDTO {
   private Integer cpu;
   private Integer ram;
-  private Integer gb;
+  private Integer traffic;
 }
 

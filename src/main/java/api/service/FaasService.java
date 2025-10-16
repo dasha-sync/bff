@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -14,7 +15,7 @@ import java.util.List;
 public class FaasService {
   private final RegistryClient registryClient;
 
-  public List<FaasResponse> getFaas() {
-    return registryClient.get("/faas", List.class);
+  public Map<String, Object> getFaas() {
+    return registryClient.get("/faas", Map.class);
   }
 }

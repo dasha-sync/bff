@@ -6,6 +6,6 @@ import lombok.Data;
 public class ResourceUpdateRequest {
   private Integer cpu;
   private Integer ram;
-  private Integer gb;
+  private Integer traffic;
 }
 

@@ -10,11 +10,9 @@ import lombok.NoArgsConstructor;
 public class ResourceResponse {
   private Integer cpu;
   private Integer ram;
-  private Integer gb;
-  private Integer calls;
+  private Integer traffic;
   private Double cpuCost;
-  private Double ramCost;
   private Double gbCost;
-  private Double collCost;
+  private Double trafficCost;
 }
 

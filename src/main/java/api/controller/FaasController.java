@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/faas")
@@ -18,8 +19,8 @@ public class FaasController {
   private final FaasService faasService;
 
   @GetMapping
-  public ResponseEntity<MetricResponse<List<FaasResponse>>> getFaas() {
-    List<FaasResponse> faas = faasService.getFaas();
+  public ResponseEntity< MetricResponse<Map<String, Object>>> getFaas() {
+    Map<String, Object> faas = faasService.getFaas();
     return ResponseEntity.ok(new MetricResponse<>("User FaaS functions", faas));
   }
 }

@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ResourceCostDTO {
   private Double cpuCost;
-  private Double ramCost;
   private Double gbCost;
-  private Double collCost;
+  private Double trafficCost;
 }
 
