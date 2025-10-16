@@ -1,4 +1,4 @@
-package api.dto.metric;
+package api.dto.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MetricResponse {
-  private String status;
-  private Object data;
+public class ApiResponse<T> {
+  private String message;
+  private T data;
 }
